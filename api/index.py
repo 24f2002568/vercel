@@ -17,3 +17,7 @@ def get_metrics(payload: dict):
         "status": "endpoint working",
         "received": payload
     }
+
+@app.get("/")
+def home():
+    return {"message": "API is live. Use POST /metrics"}
